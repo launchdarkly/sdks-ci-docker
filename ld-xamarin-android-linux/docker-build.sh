@@ -28,6 +28,7 @@ wget --progress=dot $XAMARIN_ANDROID_BUILD_URL -O ./$XAMARIN_ANDROID_TOOLS_ARCHI
 
 sudo chown circleci:circleci $XAMARIN_ANDROID_TOOLS_ARCHIVE
 tar xjf $XAMARIN_ANDROID_TOOLS_ARCHIVE
+rm $XAMARIN_ANDROID_TOOLS_ARCHIVE
 mv $XAMARIN_ANDROID_BUILD_ARTIFACTS_DIR $XAMARIN_ANDROID_TOOLS_DIR
 
 # Move the Xamarin Android tools to the locations where msbuild expects them to be.
