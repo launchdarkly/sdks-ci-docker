@@ -1,8 +1,6 @@
 
 # This version should be incremented with every material change
-IMAGE_VERSION=1
-
-VERSION=$(IMAGE_VERSION)
+VERSION=1
 
 DOCKER_TAG_BASE="ldcircleci/ld-xamarin-android-linux"
 DOCKER_TAG=$(DOCKER_TAG_BASE):$(VERSION)
@@ -24,4 +22,4 @@ echo-tag:
 login:
 	docker login
 
-.PHONY: build echo-tag login push-all push-latest
+.PHONY: build echo-tag login push push-latest
