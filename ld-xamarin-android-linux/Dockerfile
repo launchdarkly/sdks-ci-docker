@@ -1,3 +1,5 @@
+ARG API_VERSION
+
 FROM circleci/android:api-${API_VERSION}
 
 WORKDIR /home/circleci
