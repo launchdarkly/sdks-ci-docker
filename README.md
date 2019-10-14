@@ -1,4 +1,4 @@
-# sdks-ci-docker
+# Docker images for LaunchDarkly SDK CI
 
 This project contains build scripts for Docker images used by LaunchDarkly SDK CI builds. These Dockerfiles are publicly accessible because they're referenced in the CircleCI configuration files within each open-source SDK repository.
 
