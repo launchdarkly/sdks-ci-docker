@@ -1,4 +1,7 @@
 
+# Use this base makefile when we only need to publish one image and don't need to do any special
+# download/config steps that can't be handled in the Dockerfile
+
 DOCKER_TAG=$(DOCKER_TAG_BASE):$(VERSION)
 DOCKER_TAG_LATEST=$(DOCKER_TAG_BASE):latest
 

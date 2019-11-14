@@ -21,11 +21,6 @@ sudo apt -y install mono-devel nuget libzip4 libpulse0
 
 # All of the above packages are required for building, except libpulse0 which is only needed for the Android emulator.
 
-# Download the Xamarin Android tools. Unfortunately the only way to get them for Linux is either to build them ourselves,
-# or to download the build products from this Jenkins job.
-
-wget --progress=dot $XAMARIN_ANDROID_BUILD_URL -O ./$XAMARIN_ANDROID_TOOLS_ARCHIVE
-
 sudo chown circleci:circleci $XAMARIN_ANDROID_TOOLS_ARCHIVE
 tar xjf $XAMARIN_ANDROID_TOOLS_ARCHIVE
 rm $XAMARIN_ANDROID_TOOLS_ARCHIVE
