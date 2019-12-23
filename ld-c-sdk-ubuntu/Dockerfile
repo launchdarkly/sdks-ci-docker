@@ -2,7 +2,7 @@ FROM ubuntu:18.10
 
 WORKDIR /home/circleci
 
-# Basic C SDK dependencies: libcurl4-openssl-dev 
+# Basic C SDK dependencies: libcurl4-openssl-dev
 # Server-side C SDK dependencies: libpcre3-dev
 # Make-based build: build-essential
 # Cmake-based build: cmake
@@ -11,6 +11,7 @@ WORKDIR /home/circleci
 RUN apt-get update -y && apt-get install -y \
   libcurl4-openssl-dev \
   libpcre3-dev \
+  libhiredis-dev \
   build-essential \
   cmake \
   doxygen zip
