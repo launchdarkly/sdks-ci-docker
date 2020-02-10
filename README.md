@@ -4,6 +4,7 @@ This project contains build scripts for Docker images used by LaunchDarkly SDK C
 
 Docker images in this repository include:
 * [`ld-c-sdk-ubuntu`](./ld-c-sdk-ubuntu)
+* [`ld-php-sdk-release`](./ld-php-sdk-release)
 * [`ld-xamarin-android-linux`](./ld-xamarin-android-linux)
 
 ## Development instructions 
