@@ -3,9 +3,9 @@
 This project contains build scripts for Docker images used by LaunchDarkly SDK CI builds. These Dockerfiles are publicly accessible because they're referenced in the CircleCI configuration files within each open-source SDK repository.
 
 Docker images in this repository include:
-* [`ld-c-sdk-ubuntu`](./ld-c-sdk-ubuntu)
-* [`ld-php-sdk-release`](./ld-php-sdk-release)
-* [`ld-xamarin-android-linux`](./ld-xamarin-android-linux)
+* [`ldcircleci/ld-c-sdk-ubuntu`](./ld-c-sdk-ubuntu)
+* [`ldcircleci/ld-php-sdk-release`](./ld-php-sdk-release)
+* [`ldcircleci/ld-xamarin-android-linux`](./ld-xamarin-android-linux)
 
 ## Development instructions 
 

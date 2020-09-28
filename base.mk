@@ -23,6 +23,6 @@ echo-tag:
 	echo "$(DOCKER_TAG)"
 
 login:
-	docker login
+	docker login -u ldcircleci
 
 .PHONY: build echo-tag login push push-latest
