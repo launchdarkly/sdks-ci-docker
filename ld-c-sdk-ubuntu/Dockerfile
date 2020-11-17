@@ -7,6 +7,7 @@ WORKDIR /home/circleci
 # Make-based build: build-essential
 # Cmake-based build: cmake
 # Documentation build: doxygen zip
+# Testing: valgrind
 
 RUN apt-get update -y && apt-get install -y \
   libcurl4-openssl-dev \
@@ -14,4 +15,6 @@ RUN apt-get update -y && apt-get install -y \
   libhiredis-dev \
   build-essential \
   cmake \
-  doxygen zip
+  doxygen \
+  zip \
+  valgrind
