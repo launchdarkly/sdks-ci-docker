@@ -1,4 +1,4 @@
-# launchdarkly-dev/php-sdk-release
+# ldcircleci/php-sdk-release
 
 This Ubuntu image contains the PHP tools that are used in releasing the LaunchDarkly PHP SDK.
 

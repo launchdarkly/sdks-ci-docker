@@ -2,7 +2,7 @@
 # This version should be incremented with every material change
 VERSION=1
 
-DOCKER_TAG_BASE="launchdarkly-dev/php-sdk-release"
+DOCKER_TAG_BASE="ldcircleci/php-sdk-release"
 
 PHPDOCUMENTOR_DOWNLOAD_URL=https://phpdoc.org/phpDocumentor.phar
 
