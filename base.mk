@@ -9,6 +9,9 @@ DOCKER_TAG_LATEST=$(DOCKER_TAG_BASE):latest
 # content that must be built locally by the Makefile before running Docker
 # LOCAL_DEPENDENCIES=my-downloaded-file.zip
 
+build: $(LOCAL_DEPENDENCIES)
+	docker build -t $(DOCKER_TAG) .
+
 push-latest: push
 	docker tag $(DOCKER_TAG) $(DOCKER_TAG_LATEST)
 	docker push $(DOCKER_TAG_LATEST)
@@ -16,13 +19,13 @@ push-latest: push
 push: build login
 	docker push $(DOCKER_TAG)
 
-build: $(LOCAL_DEPENDENCIES)
-	docker build -t $(DOCKER_TAG) .
-
 echo-tag:
 	echo "$(DOCKER_TAG)"
 
 login:
 	docker login -u ldcircleci
 
-.PHONY: build echo-tag login push push-latest
+clean:
+	rm -rf downloads
+
+.PHONY: build echo-tag login push push-latest clean
