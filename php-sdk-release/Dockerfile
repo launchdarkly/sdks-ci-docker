@@ -1,5 +1,8 @@
 FROM php:7.3-cli
 
+# zip may be needed as part of our documentation build process
+RUN apt-get -q update && apt-get -y install zip
+
 WORKDIR /home
 
 ENV PHPDOCUMENTOR_ARCHIVE_FILE=phpDocumentor.phar
