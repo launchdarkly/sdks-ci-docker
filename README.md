@@ -9,6 +9,7 @@ Docker images in this repository include:
 * [`ldcircleci/ld-c-sdk-ubuntu`](./ld-c-sdk-ubuntu)
 * [`ldcircleci/ld-xamarin-android-linux`](./ld-xamarin-android-linux)
 * [`ldcircleci/php-sdk-release`](./php-sdk-release)
+* [`ldcircleci/releaser-v1-compat`](./releaser-v1-compat)
 
 Older images we no longer use, but that can be found in the Git history of this repository if we ever need to reconstruct them:
 * `ldcircleci/ld-jdk7-jdk8`
