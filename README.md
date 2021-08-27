@@ -8,6 +8,7 @@ Docker images in this repository include:
 * [`ldcircleci/dotnet5-release`](./dotnet5-release)
 * [`ldcircleci/ld-c-sdk-ubuntu`](./ld-c-sdk-ubuntu)
 * [`ldcircleci/ld-xamarin-android-linux`](./ld-xamarin-android-linux)
+* [`ldcircleci/openapi-release`](./openapi-release)
 * [`ldcircleci/php-sdk-release`](./php-sdk-release)
 * [`ldcircleci/releaser-v1-compat`](./releaser-v1-compat)
 
