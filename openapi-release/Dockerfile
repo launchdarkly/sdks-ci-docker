@@ -39,16 +39,6 @@ RUN mkdir -p /home/releaser/.rubygems
 ENV GEM_HOME="/home/releaser/.rubygems/"
 ENV PATH="$PATH:/home/releaser/.rubygems/bin"
 
-# Docker (because the OpenAPI release runs the code generator in a secondary Docker container)
-RUN apt -q install -y apt-transport-https ca-certificates gnupg lsb-release
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
-	gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-RUN echo \
-  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-RUN apt -q update
-RUN apt -q install -y docker-ce docker-ce-cli containerd.io
-
 # Make sure files in home dir are owned by default user
 RUN chown -R releaser:releaser /home/releaser
 
