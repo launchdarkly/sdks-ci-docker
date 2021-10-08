@@ -5,13 +5,13 @@ RUN apt-get -q update && apt-get -y install zip
 
 WORKDIR /home
 
-ENV PHPDOCUMENTOR_ARCHIVE_FILE=phpDocumentor.phar
+ENV PHP_TOOLS_DIR=/home/launchdarkly/tools/php
+ENV PATH="${PATH}:${PHP_TOOLS_DIR}"
 
-ENV LDTOOLS_DIR=/home/launchdarkly/tools
+RUN mkdir -p ${PHP_TOOLS_DIR}
 
-RUN mkdir -p ${LDTOOLS_DIR}
-
-ADD downloads/${PHPDOCUMENTOR_ARCHIVE_FILE} ${LDTOOLS_DIR}/php/${PHPDOCUMENTOR_ARCHIVE_FILE}
+ADD downloads/composer ${PHP_TOOLS_DIR}/composer
+ADD downloads/phpdoc ${PHP_TOOLS_DIR}/phpdoc
 
 # Here we're overriding CMD to a shell because the php:7.3-cli image sets CMD to the
 # PHP interpreter-- which could be convenient if you wanted to just use the image to
