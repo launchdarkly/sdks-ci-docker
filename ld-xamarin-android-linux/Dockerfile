@@ -4,8 +4,8 @@ FROM circleci/android:api-${API_VERSION}
 
 WORKDIR /home/circleci
 
-ADD downloads/xamarin-android.tar.bz2 .
+COPY downloads/xamarin-android.tar.bz2 .
 
-ADD docker-build.sh .
+COPY docker-build.sh .
 
 RUN ./docker-build.sh
