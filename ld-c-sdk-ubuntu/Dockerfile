@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 WORKDIR /home/circleci
 
@@ -10,13 +10,18 @@ WORKDIR /home/circleci
 # Documentation build: doxygen zip
 # Testing: valgrind
 
+# This is needed otherwise docker build will hang while Ubuntu asks us to select a timezone.
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update -y && apt-get install -y \
   libcurl4-openssl-dev \
   libpcre3-dev \
   libhiredis-dev \
   build-essential \
-  cmake \
   doxygen \
   git \
   zip \
-  valgrind
+  valgrind \
+  wget
+
+RUN wget -qO- "https://cmake.org/files/v3.22/cmake-3.22.1-linux-x86_64.tar.gz" | tar --strip-components=1 -xz -C /usr/local
