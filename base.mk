@@ -10,7 +10,7 @@ DOCKER_TAG_LATEST=$(DOCKER_TAG_BASE):latest
 # LOCAL_DEPENDENCIES=my-downloaded-file.zip
 
 build: $(LOCAL_DEPENDENCIES)
-	docker build -t $(DOCKER_TAG) .
+	docker build $(DOCKER_BUILD_OPTIONS) -t $(DOCKER_TAG) .
 
 push-latest: push
 	docker tag $(DOCKER_TAG) $(DOCKER_TAG_LATEST)
