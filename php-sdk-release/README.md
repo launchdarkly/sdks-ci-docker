@@ -4,6 +4,8 @@ This Ubuntu image contains the PHP tools that are used in releasing the LaunchDa
 
 It provides the following:
 
-* A PHP 7.4 command-line distribution.
+* A PHP 8.0 command-line distribution.
 * Composer 2.x, available in the path as `composer`.
 * PhpDocumentor 3.x, available in the path as `phpdoc`.
+
+For compatibility with older PHP versions, see older versions of this image.
