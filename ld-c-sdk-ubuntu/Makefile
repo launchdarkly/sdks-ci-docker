@@ -1,6 +1,6 @@
 
 # This version should be incremented with every material change
-VERSION=3
+VERSION=4
 
 DOCKER_TAG_BASE="ldcircleci/ld-c-sdk-ubuntu"
 
