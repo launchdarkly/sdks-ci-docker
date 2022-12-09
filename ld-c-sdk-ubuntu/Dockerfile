@@ -9,6 +9,7 @@ WORKDIR /home/circleci
 # For cloning googletest code: git
 # Documentation build: doxygen zip
 # Testing: valgrind
+# Required by aws-cli authentication: curl
 
 # This is needed otherwise docker build will hang while Ubuntu asks us to select a timezone.
 ENV DEBIAN_FRONTEND=noninteractive
@@ -22,7 +23,8 @@ RUN apt-get update -y && apt-get install -y \
   git \
   zip \
   valgrind \
-  wget
+  wget \
+  curl
 
 RUN codename=$(cat /etc/os-release | grep UBUNTU_CODENAME | sed -e "s/^UBUNTU_CODENAME=//") \
     && wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null \
