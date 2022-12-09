@@ -24,4 +24,11 @@ RUN apt-get update -y && apt-get install -y \
   valgrind \
   wget
 
-RUN wget -qO- "https://cmake.org/files/v3.22/cmake-3.22.1-linux-x86_64.tar.gz" | tar --strip-components=1 -xz -C /usr/local
+RUN codename=$(cat /etc/os-release | grep UBUNTU_CODENAME | sed -e "s/^UBUNTU_CODENAME=//") \
+    && wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null \
+    && echo "deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ ${codename} main" | tee /etc/apt/sources.list.d/kitware.list >/dev/null \
+    && apt purge --auto-remove cmake \
+    && apt-get update -y \
+    && apt-get install -y cmake
+
+
