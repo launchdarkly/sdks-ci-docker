@@ -1,4 +1,4 @@
-FROM php:8.0-cli
+FROM php:8.1-cli
 
 # zip may be needed as part of our documentation build process
 RUN apt-get -q update && apt-get -y install zip
