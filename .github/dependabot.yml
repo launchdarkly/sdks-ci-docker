@@ -1,0 +1,50 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/dotnet5-release"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "docker"
+    directory: "/dotnet6-release"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "docker"
+    directory: "/ld-c-sdk-ubuntu"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "docker"
+    directory: "/ld-xamarin-android-linux"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "docker"
+    directory: "/openapi-release"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "docker"
+    directory: "/php-sdk-release"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "docker"
+    directory: "/releaser-v1-compat"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
