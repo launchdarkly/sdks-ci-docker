@@ -1,5 +1,11 @@
 # Docker images for LaunchDarkly SDK CI
 
+> [!WARNING]
+> **This repository is discontinued and is being archived.** The Docker images it produced are no
+> longer maintained or rebuilt. The SDK repositories that consumed these images must now provide
+> their own build environments. The image sources below remain only for historical reference and
+> may be reconstructed from this repository's Git history if ever needed.
+
 This project contains build scripts for Docker images used by LaunchDarkly SDK CI builds and releases. These Dockerfiles are publicly accessible because they're referenced in CircleCI configuration files within the open-source SDK repositories.
 
 Despite the `ldcircleci/` prefix, these images could also be used in release processes that do not use a CI host.
